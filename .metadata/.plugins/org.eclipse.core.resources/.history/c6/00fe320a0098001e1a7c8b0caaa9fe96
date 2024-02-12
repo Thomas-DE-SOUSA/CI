@@ -1,0 +1,24 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import com.example.demo.entity.Categorie;
+import com.example.demo.dto.ProduitDTO;
+
+
+public interface ProduitService {
+	ProduitDTO saveProduitDTO(ProduitDTO p);
+	ProduitDTO updateProduitDTO(ProduitDTO p);
+	void deleteProduitDTO(ProduitDTO p);
+	void deleteProduitDTOById(Long id);
+	ProduitDTO getProduitDTO(Long id);
+	ProduitDTO convertEntityToDto (Produit produit);
+	List<ProduitDTO> getAllProduitDTOs();
+	List<ProduitDTO> findByNomProduitDTO(String nom);
+	List<ProduitDTO> findByNomProduitDTOContains(String nom);
+	List<ProduitDTO> findByNomPrix (String nom, Double prix);
+	List<ProduitDTO> findByCategorie (Categorie categorie);
+	List<ProduitDTO> findByCategorieIdCat(Long id);
+	List<ProduitDTO> findByOrderByNomProduitDTOAsc();
+	List<ProduitDTO> trierProduitDTOsNomsPrix();
+}
